@@ -1,0 +1,31 @@
+spring:
+  profiles.active: local
+---
+spring:
+  profiles: local
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: true
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    db: 0
+    pool:
+      max-active: 200
+      max-wait: 10000
+      max-idle: 100
+      min-idle: 5
+
+
+
+server.port: 8080
+
+
+endpoints:
+ enabled: false
+ health:
+   enabled: true
+   time-to-live: 5000
+
